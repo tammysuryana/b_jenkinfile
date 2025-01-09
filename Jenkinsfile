@@ -8,11 +8,14 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                echo("yeay build")
+                echo("yeay build step")
+                sh("./mvmw test compile testcompile ") 
+                echo("Build finish")
             }
     }  
         stage('testing'){
             steps{
+                sh("./mvmw test")
                 echo("yeaytesting")
                 sleep(10)
             }
