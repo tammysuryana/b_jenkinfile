@@ -6,27 +6,21 @@ pipeline{
     }
     
     stages{
-        stage('Build'){
+        stage('build'){
             steps{
-                echo("berhasil Build")
+                echo("yeay build")
+            }
+    }  
+        stage('testing'){
+            steps{
+                echo("yeaytesting")
+            }
+    } 
+        stage('deploymet'){
+            steps{
+                echo("yeay deploy")
             }
     }
         
     }
- 
-        stage('Unitesting '){
-            steps{
-                echo("lolos Test")
-            }
-    }
-        
-    
-    
-        stage('Deploy'){
-            steps{
-                echo("Berhasil terdepoloy siliahkan refresh webstie anda!")
-            }
-    }
-        
-    
 }
