@@ -4,11 +4,11 @@ pipeline{
     
     stages{
         stage('build'){
-            agent {
-        node{
-            label "jenkinmaster && jr01"
-        }
-    }
+            agent{
+                node{
+                    label "jenkinmaster && jr01"
+                }
+            }
             steps{
                 echo("yeay build step")
                 sh("./mvnw test compile test-compile ") 
@@ -16,11 +16,11 @@ pipeline{
             }
     }  
         stage('testing'){
-        agent {
-        node{
-            label "jenkinmaster && jr01"
-        }
-    }
+            agent{
+                node{
+                    label "jenkinmaster && jr01"
+                }
+            }
             steps{
                 sh("./mvnw test")
                 echo("yeay testing")
@@ -28,11 +28,11 @@ pipeline{
             }
     } 
         stage('deploymet'){
-        agent {
-        node{
-            label "jenkinmaster && jr01"
-        }
-    }
+            agent{
+                node{
+                    label "jenkinmaster && jr01"
+                }
+            }
             steps{
                 echo("BUILD SUCKSESSSSSS")
             }
