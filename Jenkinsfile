@@ -1,7 +1,7 @@
 pipeline{
     agent {
         node{
-            label "jr01"
+            label "jenkinmaster && jr01"
         }
     }
     
