@@ -9,20 +9,20 @@ pipeline{
         stage('build'){
             steps{
                 echo("yeay build step")
-                sh("./mvnw test compile testcompile ") 
+                sh("./mvnw test compile test-compile ") 
                 echo("Build finish")
             }
     }  
         stage('testing'){
             steps{
                 sh("./mvnw test")
-                echo("yeaytesting")
+                echo("yeay testing")
                 sleep(10)
             }
     } 
         stage('deploymet'){
             steps{
-                echo("yeay deploy")
+                echo("BUILD SUCKSESSSSSS")
             }
     }
         
