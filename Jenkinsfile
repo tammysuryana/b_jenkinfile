@@ -1,14 +1,14 @@
 pipeline{
     agent {
         node{
-            label "jenkinmaster || jr01"
+            label "jenkinmaster && jr01"
         }
     }
     
     stages{
         stage('staging'){
             steps{
-                echo("JOBSUDAHBERJALAN!!!!!!!!!")
+                echo("yeay")
             }
     }
         
