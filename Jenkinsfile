@@ -9,13 +9,13 @@ pipeline{
         stage('build'){
             steps{
                 echo("yeay build step")
-                sh("./mvmw test compile testcompile ") 
+                sh("./mvnw test compile testcompile ") 
                 echo("Build finish")
             }
     }  
         stage('testing'){
             steps{
-                sh("./mvmw test")
+                sh("./mvnw test")
                 echo("yeaytesting")
                 sleep(10)
             }
