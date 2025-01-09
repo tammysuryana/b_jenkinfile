@@ -14,6 +14,7 @@ pipeline{
         stage('testing'){
             steps{
                 echo("yeaytesting")
+                sleep(10)
             }
     } 
         stage('deploymet'){
